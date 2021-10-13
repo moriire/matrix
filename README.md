@@ -5,7 +5,7 @@
 ## Overview
 Python alternative to numpy package.
 
-### _Converts from:_   
+### Features:_   
 - Light weight 
 - fast
 - Limited to simple matrix/vector operations.
