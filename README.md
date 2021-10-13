@@ -11,7 +11,7 @@ Python alternative to numpy package.
 - Limited to simple matrix/vector operations.
 
 ## Requirements
-Python 3.x+
+Python 3+
 
 ## Installation
 
@@ -22,25 +22,25 @@ pip install matrix
 Basic usage:
 
 ```sh
->>> from matrix import Matrix
+>>> import matrix
 >>> row_1 = [i for i in range(3)]
 >>> row_2 = [i for i in range(3, 6)]
 >>> row_3 = [i for i in range(6, 9)]
->>> matrix = Matrix(row_1, row_2, row_3)
+>>> mat = Matrix(row_1, row_2, row_3)
 ```
 OR
 ```sh
 
->>> matrix = Matrix(([0, 1, 2], [3, 4, 5], [6, 7, 8]))
+>>> matrix = matrix.Matrix(([0, 1, 2], [3, 4, 5], [6, 7, 8]))
 ```
 Result
 ```sh
->>> print(matrix)
+>>> print(mat)
 ```
 >>> Matrix([[0, 1, 2], [3, 4, 5], [6, 7, 8]])
 
 ```sh
->>> print(matrix.size())
+>>> print(mat.size())
 ```
 >>> (3, 3)
 
@@ -54,17 +54,31 @@ Result
 
 #### Subtraction
 ```sh
->>> sub_matrices = matrix - matrix
+>>> sub_matrices = mat - mat
 >>> print(sub_matices)
 ```
 >>> Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
 
 #### Multiplication (element-wise)
 ```sh
->>> mul_matrices = matrix * matrix
+>>> mul_matrices = mat * mat
 >>> print(mul_matices)
 ```
 >>> Matrix([[0, 1, 4], [9, 16, 25], [36, 49, 64]])
+
+#### Ones
+```sh
+>>> ones = matrix.ones(3)
+>>> print(ones)
+```
+>>> Matrix(([1, 1, 1], [1, 1, 1], [1, 1, 1]))
+
+#### Zeros
+```sh
+>>> ones = matrix.zeros(3)
+>>> print(zeros)
+```
+>>> Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
 
 ## License
 MIT
