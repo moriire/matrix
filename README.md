@@ -31,15 +31,11 @@ Basic usage:
 >>> matrix = Matrix(row_1, row_2, row_3)
 >>> print(matrix)
 ```
->>> Matrix([[0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8]])
+>>> Matrix([[0, 1, 2], [3, 4, 5], [6, 7, 8]])
 
 ```sh
 print(matrix.size())
 ```
-
 >>> (3, 3)
-
 ## License
 MIT
