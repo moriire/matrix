@@ -5,7 +5,7 @@
 ## Overview
 Python alternative to numpy package.
 
-### Features:_   
+### _Features:_   
 - Light weight 
 - fast
 - Limited to simple matrix/vector operations.
@@ -18,9 +18,7 @@ Python 3.x+
 ```sh
 pip install matrix
 ```
-
 #### Sample Code
-
 Basic usage:
 
 ```sh
@@ -53,5 +51,20 @@ Result
 >>> print(add_matrices)
 ```
 >>> Matrix([[0, 2, 4], [6, 8, 10], [12, 14, 16]])
+
+#### Subtraction
+```sh
+>>> sub_matrices = matrix - matrix
+>>> print(sub_matices)
+```
+>>> Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+
+#### Multiplication (element-wise)
+```sh
+>>> mul_matrices = matrix * matrix
+>>> print(mul_matices)
+```
+>>> Matrix([[0, 1, 4], [9, 16, 25], [36, 49, 64]])
+
 ## License
 MIT
