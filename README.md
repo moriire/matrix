@@ -30,11 +30,11 @@ Basic usage:
 >>> row_3 = [i for i in range(6, 9)]
 >>> matrix = Matrix(row_1, row_2, row_3)
 >>> print(matrix)
-```
+`
 >>> Matrix([[0, 1, 2],
         [3, 4, 5],
         [6, 7, 8]])
-#
+`
 ```sh
 print(matrix.size())
 ```
