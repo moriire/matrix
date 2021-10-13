@@ -82,10 +82,17 @@ Result
 
 #### Cofactors
 ```sh
->>> cof = matrix.cofactors()
->>> print(cof)
+>>> cof = matr.cofactors()
+>>> print(tuple(cof))
 ```
->>> Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+>>> (0, 1, -2)
+
+#### Dot Product
+```sh
+>>> dot = matrix.dot([0, 1, 2], [3, 4, 5], [2, 4, 6])
+>>> print(dot)
+```
+>>> [0, 3, 4]
 
 ## License
 MIT
