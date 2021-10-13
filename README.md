@@ -82,14 +82,14 @@ Result
 
 #### Cofactors
 ```sh
->>> cof = matr.cofactors()
+>>> cof = mat.cofactors()
 >>> print(tuple(cof))
 ```
 >>> (0, 1, -2)
 
 #### Dot Product
 ```sh
->>> dot = matrix.dot([0, 1, 2], [3, 4, 5], [2, 4, 6])
+>>> dot = mat.dot([0, 1, 2], [3, 4, 5], [2, 4, 6])
 >>> print(dot)
 ```
 >>> [0, 3, 4]
