@@ -80,5 +80,12 @@ Result
 ```
 >>> Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
 
+#### Cofactors
+```sh
+>>> cof = matrix.cofactors()
+>>> print(cof)
+```
+>>> Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+
 ## License
 MIT
