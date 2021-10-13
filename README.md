@@ -24,19 +24,22 @@ pip install matrix
 Basic usage:
 
 ```sh
-from matrix import Matrix
-row_1 = [i for i in range(3)]
-row_2 = [i for i in range(3, 6)]
-row_3 = [i for i in range(6, 9)]
-matrix = Matrix(row_1, row_2, row_3)
-print(matrix)
+>>> from matrix import Matrix
+>>> row_1 = [i for i in range(3)]
+>>> row_2 = [i for i in range(3, 6)]
+>>> row_3 = [i for i in range(6, 9)]
+>>> matrix = Matrix(row_1, row_2, row_3)
+>>> print(matrix)
 ```
+>>> Matrix([[0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8]])
 #
 ```sh
 print(matrix.size())
 ```
 '
-#
+>>> (3, 3)
 '
 ## License
 MIT
