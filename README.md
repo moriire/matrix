@@ -33,7 +33,7 @@ Basic usage:
 OR
 ```sh
 
-Matrix(([0, 1, 2], [3, 4, 5], [6, 7, 8]))
+>>> matrix = Matrix(([0, 1, 2], [3, 4, 5], [6, 7, 8]))
 ```
 Result
 ```sh
@@ -42,8 +42,16 @@ Result
 >>> Matrix([[0, 1, 2], [3, 4, 5], [6, 7, 8]])
 
 ```sh
-print(matrix.size())
+>>> print(matrix.size())
 ```
 >>> (3, 3)
+
+## Operation
+#### Matrix Addition
+```sh
+>>> add_matrices = matrix + matrix
+>>> print(add_matrices)
+```
+>>> Matrix([[0, 2, 4], [6, 8, 10], [12, 14, 16]])
 ## License
 MIT
