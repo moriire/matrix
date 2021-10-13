@@ -65,19 +65,20 @@ class Arith:
 		return self.__str__(a)
 
 def zeros(n):
-		z = list(itertools.repeat([0 for _ in range(n)], n))
-		return z
+	z = list(itertools.repeat([0 for _ in range(n)], n))
+	return z
 		
 def ones(n):
-		z = list(itertools.repeat([1 for _ in range(n)], n))
-		return Matrix(*z)
+	z = list(itertools.repeat([1 for _ in range(n)], n))
+	return Matrix(*z)
 		
 def diagonal(n, k=1):
-		z = [[0 for _ in range(n)] for _ in range(n)]
-		for j in range(n):
-			z[j].insert(j , k)
-		w = list(map(lambda li: li[:-1], z))
-		return Matrix(*w)
+	z = [[0 for _ in range(n)] for _ in range(n)]
+	for j in range(n):
+		z[j].insert(j , k)
+	w = list(map(lambda li: li[:-1], z))
+	return Matrix(*w)
+
 class Matrix(Arith):
 	def __init__(self, *row):
 		super().__init__(*row)
@@ -95,8 +96,8 @@ class Matrix(Arith):
 		for i in j:
 			return list(map(lambda x: operator.__mul__(*x), i))
 
-	def cofactors(self, *li):
-		return [pow(-1, n+1)*li[0][n] for n in range(len(li[0]))]
+	def cofactors(self):
+		return [pow(-1, n+1)*self.row[0][n] for n in range(len(self.row[0]))]
 
 	def transpose(self, *li):
 		v = []
@@ -106,12 +107,3 @@ class Matrix(Arith):
 			m.remove(m[l])
 			v.append(m)
 		return v
-
-a = Matrix([1,2,3], [4,4,5], [10, 0, 7])		
-c = Matrix([1,2,3], [4,4,5], [10, 0, 7])
-d = Matrix([1,2,3], [4,4,5], [3, 5, 5])
-#print(diagonal(3))
-#print(ones(3))
-#print(a.reverse([[1,2,3], [4,4,5], [10, 0, 7]]))
-#print(list(a.dot([[0,1,2], [3,4,5], [6, 8, 7]])))
-print(a.transpose([0,1,2], [3,4,5], [6, 8, 7]))
