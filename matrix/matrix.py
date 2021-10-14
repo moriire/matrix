@@ -14,10 +14,21 @@ class Arith:
 		return t[0] - t[1]
 		
 	def __mul__(self, other):
-		z = []
-		if len(self.row) == len(other.row):
-				for s in range(len(self.row)):
-					z.append(list(map(operator.mul, list(self.row[s]), list(other.row[s]))))
+		z = []		
+		if isinstance(other, int) :
+			for row  in self.row:
+				z.append(list(map(lambda x: other*x, row)))
+		#return self.__repr__(z), other		
+		elif isinstance(other.row, (tuple, list)):
+							for s in range(len(self.row)):
+								z.append(list(map(operator.mul, list(self.row[s]), list(other.row[s]))))					
+		return self.__repr__(z)
+		
+	def __rmul__(self, other):
+		z =  []
+		if isinstance(self.row, (tuple, list)) and isinstance(other, int):
+			for row in self.row:
+				z.append(list(map(lambda x: other*x, row)))
 		return self.__repr__(z)
 		
 	def __truediv__(self, other):
@@ -59,9 +70,12 @@ class Arith:
 	def __str__(self, a=None):
 		if a is None:
 			return f"Matrix({self.row})"
-		return f"Matrix({a})"
+		
+		return "Matrix({0})".format(a)
 	
-	def __repr__(self, a):
+	def __repr__(self, a=None):
+		if a is None:
+			return self.__str__(self.row)
 		return self.__str__(a)
 
 def zeros(n):
@@ -96,14 +110,17 @@ class Matrix(Arith):
 		for i in j:
 			return list(map(lambda x: operator.__mul__(*x), i))
 
-	def cofactors(self):
+	def factors(self):
 		return [pow(-1, n+1)*self.row[0][n] for n in range(len(self.row[0]))]
 
-	def transpose(self, *li):
+	def transpose(self):
+		return self.reverse(self.row)
+	def minor(self, k):
 		v = []
-		length = len(li[0])
-		for l in range(length):
-			m = list(zip(*li[1:]))
-			m.remove(m[l])
-			v.append(m)
+		xstack = list(self.row)
+		xstack.pop(k)
+		for j in xstack:
+			j.pop(k)
+			v.append(j)
 		return v
+		
