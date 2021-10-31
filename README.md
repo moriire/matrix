@@ -43,7 +43,7 @@ Result
 >>> print(mat.size())
 ```
 >>> (3, 3)
-
+[wikipedia](https://en.wikipedia.org/wiki/Matrix_(mathematics)#Size)
 ## Operation
 #### Matrix Addition
 ```sh
