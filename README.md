@@ -93,6 +93,8 @@ Result
 >>> print(dot)
 ```
 >>> [0, 3, 4]
+## Links
+[wikipedia](https://en.wikipedia.org/wiki/Matrix_(mathematics))
 
 ## License
 MIT
