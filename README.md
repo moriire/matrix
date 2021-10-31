@@ -97,5 +97,11 @@ Result
 ## Links
 [wikipedia](https://en.wikipedia.org/wiki/Matrix_(mathematics))
 
+### Transposition
+```sh
+>>> transp = mat.transpose()
+>>> print(transp)
+```
+[wikipedia](https://en.wikipedia.org/wiki/Transpose)
 ## License
 MIT
